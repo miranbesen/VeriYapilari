@@ -103,7 +103,7 @@ void buble_down(struct heap *heap, int index){
             heap->dizi[index].key < heap->dizi[sol].key) || 
            (sag <heap->eleman_sayisi && 
             heap->dizi[index].key < heap->dizi[sag].key)){
-        if(sag>=heap->eleman_sayisi || heap->dizi[sol].key >heap->dizi[sag].key){
+        if(sag>=heap->eleman_sayisi || heap->dizi[sol].key >heap->dizi[sag].key){ //burada sagı yoksa veya solu sagından büyükse diye kontrol yapıyor.
           temp_key = heap->dizi[sol].key;
           heap->dizi[sol].key=heap->dizi[index].key;
           heap->dizi[index].key=temp_key;
